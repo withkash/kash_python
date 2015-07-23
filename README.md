@@ -14,14 +14,14 @@ Create an an authorization for payment:
     try:
         authorizationDict = sc.createAuthorization(customerId, '2000')
         authorizationId = authorizationDict['authorization_id']
-    except e:
+    except Exception as e:
         print e
 
 Clear an authorization:
 
     try:
         sc.removeAuthorization(authorizationId)
-    except e:
+    except Exception as e:
         print e
 
 Create a transaction:
@@ -29,7 +29,7 @@ Create a transaction:
     try:
         authorizationDict = sc.createAuthorization(customerId, '2000')
         authorizationId = authorizationDict['authorization_id']
-    except e:
+    except Exception as e:
         print e
     
     
